@@ -15,24 +15,24 @@
       <div class="formbox">
         <div class="box">
           <h1 id="title">Masuk</h1>
-          <form action="contact-book-message.php" id="form" method="post">
+          <form action="proses-login.php" id="form" method="post">
             <div class="input-group">
               <div class="input-field" id="nameField">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Nama" id="name" name="username" required>
+                <input type="text" placeholder="Username" id="name" name="username" required>
               </div>
 
               <div class="input-group">
                 <div class="input-field">
                   <i class="fa-solid fa-lock"></i>
-                  <input type="Phone Number" placeholder="No. Telepon" id="telp" name="number" required>
+                  <input type="password" placeholder="Password" id="telp" name="password" required>
                 </div>
                 <div class="signin">
-                  <button type="button" id="switchBtn">Akses Admin</button>
+                  <button type="button" id="switchBtn">Akses User</button>
                 </div>
 
                 <div class="btn-field">
-                  <button type="submit" id="submitBtn" name="submitUser">Masuk</button>
+                  <button type="submit" id="submitBtn" name="submitAdmin">Masuk</button>
                 </div>
               </div>
           </form>
@@ -55,10 +55,11 @@
     let telp = document.getElementById("telp")
     let alert = document.getElementById("alert")
 
-    switchBtn.onclick= function()
+    switchBtn.onclick = function()
     {
-      window.location.href = "akses-admin.php";
+      window.location.href = "index.php";
     }
+
   </script>
 
 </html>

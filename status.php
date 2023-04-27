@@ -8,6 +8,17 @@
         background-color: #f2f2f2;
       }
 
+      body{
+        width: 100%;
+        height: 100vh;
+        background-position: bottom;
+        background-size: center;
+        position: relative;
+        background-image: url(images/image1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+
       .container {
         max-width: 800px;
         margin: 0 auto;
@@ -55,14 +66,14 @@
         if ($_GET['status'] == 'suksesMessage') {
           echo "<h1>selamat!</h1>";
           echo "<p>Anda telah berhasil mengirimkan pesan kepada pejabat.</p>";
-          echo "<form action='contact-book.php'>
+          echo "<form action='index.php'>
                   <button>Kembali</button>
                 </form>";
         } 
         else if ($_GET['status'] == 'gagalMessage') {
           echo "<h1>gagal!</h1>";
           echo "<p>Anda gagal mengirimkan pesan kepada pejabat.</p>";
-          echo "<form action='contact-book.php'>
+          echo "<form action='index.php'>
                   <button>Kembali</button>
                 </form>";
         }

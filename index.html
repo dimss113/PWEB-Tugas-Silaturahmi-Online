@@ -15,24 +15,24 @@
       <div class="formbox">
         <div class="box">
           <h1 id="title">Masuk</h1>
-          <form action="contact-book-message.php" id="form" method="post">
+          <form action="" id="form">
             <div class="input-group">
               <div class="input-field" id="nameField">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Nama" id="name" name="username" required>
+                <input type="text" placeholder="Nama" id="name" required>
               </div>
 
               <div class="input-group">
                 <div class="input-field">
                   <i class="fa-solid fa-lock"></i>
-                  <input type="Phone Number" placeholder="No. Telepon" id="telp" name="number" required>
+                  <input type="Phone Number" placeholder="No. Telepon" id="telp" required>
                 </div>
                 <div class="signin">
                   <button type="button" id="switchBtn">Akses Admin</button>
                 </div>
 
                 <div class="btn-field">
-                  <button type="submit" id="submitBtn" name="submitUser">Masuk</button>
+                  <button type="submit" id="submitBtn">Masuk</button>
                 </div>
               </div>
           </form>
@@ -40,12 +40,31 @@
 
       </div>
     </div>
+    <div class="success-msg" id="success-msg">
+      <div class="success-img">
+        <img src="images/image3.png" alt="">
+      </div>
+      <div class="message-box">
+
+        <div class="catalog">
+          <img src="images/image4.png" alt="">
+        </div>
+        <div class="message">
+          <h1>Pesan untuk Cak Ery</h1>
+          <form action="" id="form-submit">
+            <textarea rows="10" cols="50">
+                    </textarea>
+            .
+            <input type="submit" id="btn-submit-msg">
+          </form>
+        </div>
+      </div>
+    </div>
   </body>
 
   <script>
 
     let submitBtn = document.getElementById("submitBtn")
-    let msgBtn = document.getElementById("btn-submit-msg");
     let switchBtn = document.getElementById("switchBtn")
     let nameField = document.getElementById("nameField")
     let name = document.getElementById("name")
@@ -55,10 +74,30 @@
     let telp = document.getElementById("telp")
     let alert = document.getElementById("alert")
 
-    switchBtn.onclick= function()
-    {
-      window.location.href = "akses-admin.php";
+    switchBtn.onclick = function () {
+      if (switchBtn.innerHTML == "Akses Admin") {
+        name.value = ""
+        telp.value = ""
+        name.placeholder = "Username"
+        telp.placeholder = "Password"
+        telp.type = "Password"
+        switchBtn.innerHTML = "Akses User"
+      }
+      else if (switchBtn.innerHTML == "Akses User") {
+        name.value = ""
+        telp.value = ""
+        name.placeholder = "Nama"
+        telp.placeholder = "No Telepon"
+        telp.type = "Phone Number"
+        switchBtn.innerHTML = "Akses Admin"
+      }
     }
+
+    submitBtn.onclick = function () {
+      document.querySelector('.formbox').remove();
+      text.style.display = "block";
+    }
+
   </script>
 
 </html>

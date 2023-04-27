@@ -8,6 +8,16 @@
 		body {
 			background-color: #f2f2f2;
 		}
+		body{
+    width: 100%;
+    height: 100vh;
+    background-position: bottom;
+    background-size: center;
+    position: relative;
+    background-image: url(../images/image1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 		table {
 			border-collapse: collapse;
@@ -47,7 +57,7 @@
 		</thead>
 		<tbody>
 		 <?php
-    $sql = "SELECT * FROM login";
+    $sql = "SELECT * FROM pejabat_login";
     $query = mysqli_query($db, $sql);
 
     while ($siswa = mysqli_fetch_array($query)) {
@@ -68,22 +78,22 @@
   	<table>
 		<thead>
 			<tr>
-				<th>ID</th>
-				<th>Username</th>
-				<th>Password</th>
+				<th>Nama</th>
+				<th>NoTelp</th>
+				<th>Pesan</th>
 			</tr>
 		</thead>
 		<tbody>
 		 <?php
-        $sql = "SELECT * FROM pejabat_login";
+        $sql = "SELECT * FROM pesan_warga";
         $query = mysqli_query($db, $sql);
 
         while ($siswa = mysqli_fetch_array($query)) {
           echo "<tr>";
 
-          echo "<td>" . $siswa['id'] . "</td>";
-          echo "<td>" . $siswa['username'] . "</td>";
-          echo "<td>" . $siswa['password'] . "</td>";
+          echo "<td>" . $siswa['nama'] . "</td>";
+          echo "<td>" . $siswa['nomor'] . "</td>";
+          echo "<td>" . $siswa['pesan'] . "</td>";
           echo "</tr>";
         }
         ?>

@@ -7,6 +7,17 @@
       background-color: #f2f2f2;
     }
 
+    body{
+      width: 100%;
+      height: 100vh;
+      background-position: bottom;
+      background-size: center;
+      position: relative;
+      background-image: url(images/image1.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
     form {
       background-color: #fff;
       padding: 20px;
@@ -79,7 +90,7 @@
 
     <div class="error-message"></div>
     <div class="tombol">
-      <p>Sudah punya akun? <a href="index.php">Login</a></p>
+      <p>Sudah punya akun? <a href="akses-admin.php">Login</a></p>
     </div>
   </form>
 

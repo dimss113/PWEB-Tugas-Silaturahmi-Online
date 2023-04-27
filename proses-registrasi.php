@@ -10,7 +10,7 @@ if (isset($_POST['register'])) {
   $password = $_POST['password'];
 
   // buat query
-  $sql = "INSERT INTO login (username, password) VALUE ('$username', '$password')";
+  $sql = "INSERT INTO pejabat_login (username, password) VALUE ('$username', '$password')";
   $query = mysqli_query($db, $sql);
 
   // apakah query simpan berhasil?
